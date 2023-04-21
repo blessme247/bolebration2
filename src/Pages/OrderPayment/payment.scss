@@ -1,0 +1,192 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+.paymentScreenWrapper {
+  background-color: lighten($color: #55c03a, $amount: 48);
+  height: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding-top: 1rem;
+  }
+
+  .paymentContent {
+    max-width: 70%;
+
+    margin: 0 auto;
+    background-color: $white;
+    padding: 1.5rem 0;
+    height: 95%;
+    margin-top: 1vh;
+    margin-bottom: 2.5vh;
+
+    .top {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      p {
+        font-size: $textSemiMedium;
+        font-weight: $fontSemiBold;
+      }
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+      max-width: 95%;
+      margin: 0 auto;
+
+      .left {
+        background-color: #55c03a;
+        width: 34%;
+        color: $white;
+        padding: 2rem 0;
+        .heading {
+          margin-bottom: 0.5rem;
+          padding-left: 1.5rem;
+          font-weight: $fontBold;
+          font-size: $textSemiMedium;
+        }
+
+        hr {
+          background-color: $white;
+          border: 1px solid $white;
+        }
+
+        .detail {
+          font-size: $textSmall;
+          display: flex;
+          justify-content: space-between;
+
+          &.totalDetail {
+            font-weight: $fontSemiBold;
+          }
+
+          &.lastDetail {
+            font-style: italic;
+            margin-top: 1rem;
+          }
+        }
+
+        // For food order Checkout page
+        .orderDetails {
+            height: 50vh;
+            overflow-y: scroll;
+            padding-bottom: 2rem;
+            padding: 0  1.5rem 1.5rem 1.5rem;
+          
+          .orderDetail {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-bottom: 1px solid #eee;
+            
+            .foodName {
+              font-weight: $fontSemiBold;
+              
+            }
+
+          }
+        }
+
+        // For ticket Checkout page
+        .ticketDetails {
+            padding: 0 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .aggregate {
+          padding: 0 1.5rem;
+          margin-top: 1.5rem;
+        }
+      }
+
+      .right {
+        width: 62%;
+
+        .paymentMethodWrapper {
+          border-top: 1px solid $black;
+          padding-top: 1rem;
+
+          .total {
+            padding-top: 1rem;
+            font-size: $textSemiMedium;
+            font-weight: $fontBold;
+            margin-bottom: 0.5rem;
+          }
+          .charge {
+            font-size: $textBase;
+            margin-bottom: 1rem;
+          }
+          .amountDue {
+            margin-bottom: 1.2rem;
+            font-size: $textBase;
+            font-weight: $fontSemiBold;
+          }
+
+          .paymentOption {
+            .heading {
+              font-weight: $fontBold;
+              margin-bottom: 1.2rem;
+            }
+
+            .option {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              border: 1px solid $black;
+              border-radius: 5px;
+              padding: 0.7rem 0 0.7rem 2rem;
+              width: 60%;
+              cursor: pointer;
+
+              &.debitOption {
+                margin-bottom: 2rem;
+              }
+
+              .title {
+                font-size: $textBase;
+                font-weight: $fontSemiBold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+
+  .paymentContent {
+    max-width: 95% !important;
+  }
+  .main {
+    flex-direction: column;
+
+    .left {
+      width: 100% !important;
+    }
+
+    .right {
+      width: 100% !important;
+    }
+  }
+}

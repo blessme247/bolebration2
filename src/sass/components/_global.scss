@@ -1,0 +1,55 @@
+@import "../../sass/abstracts/variables";
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%btnWithPadding {
+  text-align: center;
+  padding: 1rem 1.875rem;
+  border-radius: 5px;
+  color: $white;
+  font-size: $textBase;
+  font-weight: $fontMedium;
+  background-color: $primary;
+  cursor: pointer;
+}
+
+%disabledBtn {
+  text-align: center;
+  padding: 1rem 1.875rem;
+  border-radius: 5px;
+  color: $white;
+  font-size: $textBase;
+  font-weight: $fontMedium;
+  background-color: $primary;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+%label {
+  font-size: 14px;
+  font-weight: $fontSemiBold;
+}
+
+%input {
+  border: none;
+  outline: 2px solid $primary;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+%formBtn {
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  align-items: center;
+  font-size: $textBase;
+  font-weight: $fontMedium;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  height: 3.3rem;
+}

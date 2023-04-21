@@ -1,0 +1,65 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+.transferScreenWrapper {
+
+   border-left: 1px solid #BEB8B8;
+   border-top: 1px solid #BEB8B8;
+   padding-bottom: 1rem;
+
+   @media (max-width: $layout-breakpoint-small ) {
+    border: none;
+   }
+
+
+   .content {
+    color: #625C5C;
+
+
+    .info {
+        font-size: $textSmall;
+        line-height: 1.3;
+        margin: 1rem auto 0 auto;
+        width: 60%;
+        color: $primary;
+        @media (max-width: $layout-breakpoint-small) {
+            width: 100%;
+          }
+    }
+
+    .top {
+        font-weight: $fontSemiBold;
+        font-size: $textSemiMedium;
+        margin-top: 2rem;
+    }
+
+    .accountDetails {
+        border: 1px solid #55C03A;
+        margin: 1.5rem auto;
+        border-radius: 5px;
+        width: 60%;
+        padding: 1rem 2rem;
+        @media (max-width: $layout-breakpoint-small) {
+            width: 100%;
+          }
+
+        &.confirmation {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        &.adjuster {
+            margin-top: 5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            font-weight: $fontSemiBold;
+        }
+
+        
+    }
+   }
+
+}

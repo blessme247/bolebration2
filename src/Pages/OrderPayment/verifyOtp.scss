@@ -1,0 +1,66 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+
+.verifyOTPage {
+
+    .otpMain {
+        margin-top: 2rem;
+
+        &__head {
+            font-size: $textSemiMedium;
+            font-weight: $fontSemiBold;
+            margin-bottom: 1rem;
+        }
+
+        &__subHead {
+            font-size: $textSmall;
+        }
+
+        &__OTP {
+            margin-top: 2rem;
+        }
+
+        &__OTPresend {
+            margin-top: 0.5rem;
+            font-size: $textSmall;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            @media (max-width: 370px) {
+                font-size: 12px;
+                font-weight: $fontSemiBold;
+            }
+
+            .resendMsg {
+                line-height: 1.5;
+            }
+
+            .OTP__timer {
+                color: $black;
+
+                span {
+                    color: $primary;
+                }
+            }
+
+            .resendBtn {
+                background-color: transparent;
+                color: $primary;
+            }
+
+
+        }
+    }
+
+    .verifyOTPBtn {
+        @extend %formBtn;
+        margin: 3rem  0 ;
+        width: 60%;
+
+        @media (max-width: $layout-breakpoint-xsmall) {
+            width: 90%;
+        }
+
+    }
+}

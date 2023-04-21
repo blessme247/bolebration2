@@ -1,0 +1,115 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .modalContent {
+    width: 45vw;
+    height: 80vh;
+    max-height: calc(100vh - 50px);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    z-index: 3;
+    // box-shadow: -5px -2px 4px rgba(0, 0, 0, 0.2);
+    
+
+    .top {
+        background-image: url("../../assets/Images/BG.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 45vh;
+        color: $white;
+        @media (max-width: $layout-breakpoint-medium) {
+          height: 50vh;
+        }
+
+        .topContent {
+            padding-top: 3rem;
+            max-width:90% ;
+            margin: 0 auto;
+
+            .question {
+                font-size: $textMedium;
+                font-weight: $fontSemiBold;
+                margin-bottom: 1rem;
+                @media (max-width: $layout-breakpoint-medium) {
+                  font-size: $textSemiMedium;
+                }
+
+
+            }
+
+            .text {
+              font-size: $textMedium;
+              margin-bottom: 1rem;
+              @media (max-width: $layout-breakpoint-medium) {
+                font-size: $textBase;
+              }
+
+              
+            }
+
+            .checkoutMenuBtn {
+              @extend %btnWithPadding;
+
+              @media (max-width: $layout-breakpoint-medium) {
+                padding: 1rem 1.3rem;;
+              }
+            }
+        }
+    }
+
+    .bottomSection {
+      background-color: $white;
+      height: 40vh;
+      @media (max-width: $layout-breakpoint-medium) {
+        height: 30vh;
+      }
+    .bottom {
+      @extend %flex;
+      max-width:90% ;
+      margin: 0 auto;
+      padding-top: 3rem;
+
+      img {
+        width: 19%;
+        aspect-ratio: 3/3 ;
+        object-fit: contain;
+      }
+    }
+    .homeRedirectText {
+      padding-top: 2rem;
+      text-align: right;
+      max-width:90% ;
+      margin: 0 auto;
+
+      a {
+        color: $primary;
+        font-size: $textBase;
+      }
+    }
+  }
+
+  }
+}
+
+// @media (max-width: $layout-breakpoint-medium) {
+
+
+//   .top {
+    
+//     .topContent {
+//       padding-left: 1.5rem ;
+  
+//     }
+//   }
+// }

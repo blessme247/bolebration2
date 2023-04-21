@@ -1,0 +1,99 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+.cardPaymentWrapper {
+
+    @media (max-width: $layout-breakpoint-small) {
+        padding-top: 2rem;
+      }
+
+    .top {
+        font-size: $textBase;
+        font-weight: $fontSemiBold;
+    }
+
+    .noSupport {
+        margin: 0.5rem 0;
+        color: $primary;
+        font-size: $textSmall;
+    }
+
+    .debitForm {
+        border-top: 1px solid #BEB8B8;
+        border-left: 1px solid #BEB8B8;
+        padding-top: 1rem;
+        padding-left: 1rem;
+
+        @media (max-width: $layout-breakpoint-small) {
+            border: none;
+            padding-left: 0;
+          }
+        .group {
+            @extend %flex;
+            margin-bottom: 2rem;
+
+
+            @media (max-width: $layout-breakpoint-small) {
+                &.cardNameAndNumberGroup {
+                    flex-direction: column;
+    
+                    .cardDetailsGroup {
+                        width: 100%;
+                        margin-bottom: 1.3rem;
+                    }
+                }
+              }
+
+            label {
+                @extend %label;
+            }
+
+            .cardDetailsGroup {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 46%;
+            }
+
+            
+
+            &.additionalDetails {
+                @extend %flex;
+                flex-wrap: wrap;
+                transform: translateY(-1.4rem);
+
+                @media (max-width: $layout-breakpoint-small) {
+                    transform: translateY(-2.6rem);
+                  }
+
+                .additionalDetailsGroup {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    margin-top: 1.3rem;
+    
+                    .dateSelector {
+                        @extend %input;
+                        height: 2.9rem;
+                    }
+                    
+                }
+           
+            }
+
+            input {
+                @extend %input;
+                height: 2.7rem
+            }
+        }
+
+        .verifyBtn {
+            @extend %formBtn;
+            width: 70%;
+            height: 2.7rem;
+            margin: 3rem auto 0 auto;
+        }
+    }
+
+}

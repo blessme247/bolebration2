@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-family: "Neurial Grotesk", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+}
+
+}
+
+
+input {
+  -webkit-border-radius: 5px;
+  
+  @media (max-width:$layout-breakpoint-medium) {
+    font-size: $textSemiMedium;
+
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #55C03A;
+}
+

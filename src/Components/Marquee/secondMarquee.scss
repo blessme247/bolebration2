@@ -1,0 +1,49 @@
+@import "../../sass/abstracts/variables";
+
+
+// marquee
+.marquee-text {
+    position: relative;
+    font-weight: 500;
+  }
+  .secondMarquee {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: #C06A3A;
+    width: 1440px;
+    flex-direction: row;
+    padding: var(--padding-md);
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 92px;
+    font-size: 1rem;
+    color: $white ;
+    font-family: "Michroma", sans-serif;
+  
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 61px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+  }
+  
+  .secondMarquee .marquee-text {
+    display: inline-block;
+    padding-left: 3rem;
+    text-indent: 0;
+    animation: marquee 5s linear infinite;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+  
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }

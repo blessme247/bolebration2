@@ -1,0 +1,48 @@
+// Breakpoints
+$layout-breakpoint-large: 1920px;
+$layout-breakpoint-semiMedium: 1440px;
+$layout-breakpoint-medium: 960px;
+$layout-breakpoint-small: 760px;
+$layout-breakpoint-xsmall: 480px;
+
+// Colors
+$primary: #D18E0C;
+$white: #fff;
+$secondary: #55C03A;
+$black: #171717;
+$linearGradient: linear-gradient(93.91deg, #FF0000 -1.82%, #F18403 105.93%);
+$fadeColor: #797878;
+
+$customBoxShadow:  0px 8px 16px rgba(255, 58, 58, 0.2);
+$topRightBorderRadius: 50px;
+
+//fontSize
+$textXtraLarge: 3.5rem;
+$textLarge: 2rem; //32px
+$textMedium: 1.5rem; // 24px
+$textSemiMedium: 1.125rem; // 18px
+$textBase: 1rem;
+$textSmall: 0.875rem; //14px
+$textVerySmall: 0.75rem; //12px
+$modalText: 1.25rem; //20px
+
+//font-weight
+$fontSemiBold: 600;
+$fontBold: 700;
+$fontMedium: 500;
+
+
+//Btn border-radius
+$borderMedium: 0.625rem; //10px
+
+//padding
+$smallPadding: 0.625rem;
+
+//Form 
+$formBorder: #fc0202;
+
+//Button 
+$btnHeight: 3rem;
+
+
+

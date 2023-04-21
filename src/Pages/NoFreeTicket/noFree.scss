@@ -1,0 +1,68 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+.customScreenWrapper {
+    
+    .contentWrapper {
+        background-color: lighten($color: #55C03A, $amount: 48);
+        height: 100vh;
+        // border: 1px solid red;
+
+        .pageContent {
+            width: $layout-breakpoint-semiMedium;
+            max-width: 90%;
+            margin: 0  auto ;
+            padding-top: 7rem;
+
+            .message {
+                text-align: center;
+                font-size: $textXtraLarge;
+                font-weight: $fontBold;
+                width: 80%;
+                margin: 2rem auto 0 auto;
+                line-height: 1.5;
+
+                span {
+                    color: $primary;
+                }
+
+                @media (max-width: $layout-breakpoint-small) {
+                    width: 90%;
+                    font-size: $textLarge;
+                    margin: 0.5rem auto 0 auto;
+                }
+            }
+            .brief {
+                text-align: center;
+                font-size: $textBase;
+                font-weight: $fontBold;
+                width: 50%;
+                margin: 2rem auto 0 auto;
+                line-height: 1.5;
+
+                @media (max-width: $layout-breakpoint-small) {
+                    width: 85%;
+                    font-weight: $fontMedium;
+                    // margin: 1.5rem auto 0 auto;
+                }
+            }
+
+            .homeRedirect {
+                margin-top: 3rem;
+                display: flex;
+                justify-content: center;
+
+                @media (max-width: $layout-breakpoint-small) {
+                    // margin-top: 2rem;
+                }
+                
+                .homeRedirectLink {
+                    @extend %btnWithPadding;
+
+                }
+                
+                
+            }
+        }
+    }
+}

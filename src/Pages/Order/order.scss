@@ -1,0 +1,241 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+
+.orderPageWrapper {
+
+    width: $layout-breakpoint-semiMedium ;
+    max-width: 90%;
+    margin:  0 auto;
+    padding: 2rem 0;
+    .header {
+        @extend %flex;
+        position: relative;
+
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .cartOpen {
+            cursor: pointer;
+
+            img {
+                transform: translateY(0.3rem);
+                    
+            }
+        }
+    }
+
+    .menu {
+
+        .menuHead {
+            margin: 2rem 0;
+        }
+
+        .foodCardWrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+            
+
+            .foodCard {
+
+                width: 80%;
+                padding: 0 0 1rem 0;
+                border-radius: 2.5rem;
+                margin-top: 2rem;
+
+                .foodName {
+                    font-size: $textSmall;
+                    font-weight: $fontMedium;
+                    margin-top: 0.5rem;
+                }
+
+                .price {
+                    font-size: $textSmall;
+                    font-weight: $fontBold;
+                    margin: 0.5rem 0;
+                }
+                
+                img {
+                    height: 250px;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .orderBtn {
+                    background-color: #55C03A ;
+                    color: $white;
+                    border: none;
+                    padding: 0.7rem 1.5rem ;
+                    border-radius: 5px;
+                    font-size: $textBase;
+                }
+            }
+        }
+    }
+
+    .cartMenu {
+        position: fixed;
+        background-color: #fcf8f3;
+        width: 35%;
+        padding: 2rem 1.5rem;
+        left: 65%;
+        top: 0;
+        height: 100vh;
+        @media (max-width: $layout-breakpoint-small) {
+            width: 100%;
+            left: 0;
+        }
+
+        &_heading {
+            margin-bottom: 1rem;
+            @extend %flex;
+
+            .text {
+                font-size: $textSemiMedium;
+                font-weight: $fontBold;
+            }
+
+            .closeMenuBtn {
+                cursor: pointer;
+                transform: rotate(45deg);
+                font-size: $textLarge;
+            }
+        }
+
+        hr {
+            border: 1px solid $black;
+            margin-bottom: 1.5rem;
+        }
+
+        &_orders{
+            overflow-y: scroll;
+            height: 100vh - 58vh;
+            padding-right: 1rem;
+            background-image: url(../../assets/Images/cartBG.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            @media (max-width: $layout-breakpoint-small) {
+                height: 100vh - 65vh;
+            }
+
+            .order {
+                border-bottom: 1px solid $black;
+                margin-bottom: 1.5rem;
+                &_top {
+                    @extend %flex;
+                }
+                &_bottom {
+                    @extend %flex;
+                    margin-top: 1rem;
+                    padding-bottom: 1.5rem;
+
+                    .removeBtn {
+                        cursor: pointer;
+                    }
+
+                    .quantity {
+                        border: 1px solid black;
+                        padding: 0.3rem 0.6rem;
+                        width: 18%;
+                        @extend %flex;
+
+                        span:nth-child(1), span:nth-child(3) {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &_footer {
+            position: sticky;
+            top: 72%;
+
+            .price {
+                @extend %flex;
+                margin-top: 1.5rem;
+
+                span {
+                    font-weight: $fontSemiBold;
+                }
+            }
+
+            .cartForm {
+
+                .emailGroup {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    margin-top: 1rem;
+                    label {
+                        @extend %label;
+                    }
+                    input {
+                        @extend %input;
+                    }
+
+                    .errorMessage {
+                        color: rgb(213, 28, 28);
+                    }
+                }
+                .checkoutRedirectWrapper {
+                    display: flex;
+                    justify-items: center;
+    
+                    .checoutBtn {
+                        width: 100%;
+                        @extend %btnWithPadding;
+                        background-color: $secondary;
+                        margin-top: 2rem;
+                        margin-inline: auto;
+                        font-size: $textSmall;
+        
+                    }
+
+                    .disabledBtn {
+                        width: 100%;
+                        @extend %disabledBtn;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+
+    .foodCard {
+        width: 40%;
+    }
+}
+
+//Scrollbar Customization
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+    margin-left: 2rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lighten($color: $primary, $amount: 40); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

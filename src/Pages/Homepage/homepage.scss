@@ -1,0 +1,442 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+.homepageWrapper {
+    
+    
+
+    .heroSection {
+        padding: 2rem 0;
+        width: $layout-breakpoint-semiMedium ;
+        max-width: 90%;
+        margin: 5rem  auto 0 auto;
+        // margin-top: 2rem;
+        .heroTop {
+            @extend %flex;
+
+            .imageWrapper {
+                width: 15%;
+            }
+
+            .days {
+                width: 80%;
+                @extend %flex;
+            }
+
+            .date {
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+
+                span {
+                    font-size: $textSemiMedium ;
+                }
+                p {
+                    font-size: $textXtraLarge;
+                    font-weight: $fontBold;
+                }
+            }
+        }
+
+        .heroCenter {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: $textXtraLarge;
+            color: $primary;
+            font-weight: $fontBold;
+        }
+
+        .heroBottom {
+            margin-top: 2rem;
+            padding: 0 ;
+            line-height: 1.5;
+            text-justify: auto;
+            font-size: $textSemiMedium;
+            font-weight: $fontMedium;
+            visibility: hidden;
+            
+        }
+
+        .heroBottom2 {
+            display: none;
+
+            @media (max-width: $layout-breakpoint-medium) {
+                    margin-top: 2rem ;
+                    padding: 0 ;
+                    line-height: 1.5 ;
+                    text-justify: auto ;
+                    font-size: $textBase ;
+                    font-weight: $fontMedium ;
+                    display: block ;
+            }
+        }
+    }
+
+    .callToAction {
+        margin: 2rem 0;
+        background-color: lighten($color: #55C03A, $amount: 48);
+        padding: 4rem 0;
+        position: relative;
+        
+        .swiper {
+            width: 68%;
+            margin: 0 auto 2rem auto;
+            align-items: center;
+            
+
+            .swiper-wrapper {
+
+                    .imageWrapper {
+                        max-width: 100%;
+                        height: 450px;
+                        @media (max-width: $layout-breakpoint-medium) {
+                            height: 350px;
+                        }
+    
+                        img {
+                            object-fit: cover;
+                            object-position: center;
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 20px;
+
+                        }
+                    }
+
+
+
+                
+            }
+          }
+
+          
+        .freeTickets {
+            background-color: $white;
+            height: 7rem;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem ;
+            position: absolute;
+            color: #55C03A;
+            z-index: 2;
+            left: 3rem;
+            top: 2rem;
+            border-radius: 15px;
+            
+
+            .percent {
+                background-color: lighten($color: #d0e0cc, $amount: 12);
+                padding: 0.6rem 1.2rem;
+                border-radius: 5px;
+                font-size: $textMedium;
+                font-weight: $fontBold;
+            }
+
+            .count {
+                display: flex;
+                flex-direction: column;
+                font-size: $textBase;
+                font-weight: $fontMedium;
+            }
+
+        }
+
+        .freeTickets2 {
+            background-color: $white;
+            height: 7rem;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            position: absolute;
+            color: #55C03A;
+            z-index: 2;
+            right: 3rem;
+            top: 16rem;
+            border-radius: 15px;
+            
+
+            .percent {
+                background-color: lighten($color: #d0e0cc, $amount: 12);
+                padding: 0.6rem 1.2rem;
+                border-radius: 5px;
+                font-size: $textMedium;
+                font-weight: $fontBold;
+            }
+
+            .count {
+                display: flex;
+                flex-direction: column;
+                font-size: $textBase;
+                font-weight: $fontMedium;
+            }
+
+        }
+
+        .registerBtnWrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4rem;
+            width: 30%;
+            margin: 4rem auto 0 auto;
+
+            @media (max-width: $layout-breakpoint-small) {
+                width: 70%;
+            }
+
+            @media (max-width: $layout-breakpoint-xsmall) {
+                width: 90%;
+            }
+
+            .registerBtn {
+               @extend %btnWithPadding;
+            }
+
+            .orderBtn {
+                @extend %btnWithPadding;
+                background-color: lighten($color: $primary, $amount: 45);
+                // background-color: $white;
+                // border: 1px solid $primary;
+                color: $primary;
+                color: #f9ac11;
+                font-weight: $fontSemiBold;
+            }
+
+
+        }
+    }
+
+    .partnersContainer {
+           padding: 2rem 0 3rem 0;
+           width: $layout-breakpoint-semiMedium ;
+           max-width: 90%;
+           margin: 0  auto 0 auto;
+
+        h2 {
+            text-align: center;
+            font-weight: $fontMedium;
+            font-size: $textXtraLarge;
+            margin-bottom: 0.5rem;
+            transform: translateY(-1.5rem);
+
+            @media (max-width: $layout-breakpoint-small) {
+                font-size: $textLarge;
+            }
+        }
+
+        .partnersLogo {
+           @extend %flex; 
+
+          img {
+            width: 15%;
+            aspect-ratio: 3/2 ;
+            object-fit: contain;
+            mix-blend-mode: color-burn ;
+          } 
+           
+           
+        }
+    }
+
+    .tweetsSection {
+        background-color: lighten($color: #55C03A, $amount: 48);
+        padding: 2rem 0 ;
+
+        .sectionHead {
+            text-align: center;
+            font-size: $textXtraLarge;
+            font-weight: $fontMedium;
+            margin-top: 1.5rem ;
+            padding: 0 1rem;
+
+            @media (max-width: $layout-breakpoint-small) {
+                font-size: $textLarge;
+            }
+            
+        }
+
+        .tweetsMarquee {
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin: 0.5rem 0;
+            
+            .marqueeContainer {
+                flex-shrink: 0;
+                gap: 1.5rem;
+                padding-right: 2rem;
+                animation: infinityScroll 17s linear 0s infinite forwards;
+                @extend %flex;
+                width: max-content;
+                max-width: unset;
+                overflow: hidden;
+                padding-right: 1.5rem;
+                &:hover {
+                    animation-play-state: paused;
+                }
+
+                .scroll { 
+                    @extend %flex;
+                    gap: 2rem;
+                    max-width: unset;
+
+                    .tweetWrapper {
+                        background-color: $white;
+                        height: fit-content;
+                        width: 380px;
+                        padding: 2rem 3rem;
+                        border-radius: 1.5rem;
+                        color: black;
+                        margin-top: 2rem;
+                        transition: all .2s ease;
+                        line-height: 1.5;
+                        &:hover {
+                            background-color: rgb(29 161 242/1);
+                            color: $white;
+        
+                        }
+        
+                        .top {
+                            @extend %flex;
+        
+                            .imageWrapper {
+        
+                                img {
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                            }
+        
+                            .nameGroup {
+                                font-size: $textSmall;
+                                margin-right: 2rem;
+        
+                                .name {
+                                    font-weight: $fontSemiBold;
+                                }
+                            }
+        
+                            .logoWrapper {
+                                background-color: rgb(29 161 242/1);
+                                padding: .3rem .5rem;
+                                border-radius: 10px;
+                            }
+                        }
+        
+                        .tweet {
+                            font-size: $textSmall;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(29 161 242/1);
+            width: fit-content;
+            margin: 4rem auto 1rem auto;
+            border-radius: 5px;
+
+            a {
+                color: $white;
+                padding: 1rem ;
+            }
+        }
+    }
+}
+
+
+@keyframes infinityScroll {
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-medium) {
+    
+
+    .date {
+
+        span {
+            font-size: $textSmall !important;
+        }
+        p {
+            font-size: $textMedium !important;
+        }
+    }
+
+    .heroBottom {
+        font-size: $textSmall !important;
+        display: none;
+    }
+
+
+    .swiper {
+        width: 90% !important;
+    }
+
+    .freeTickets {
+        top: 0 !important;
+        left: 5rem !important;
+        height: 5rem !important;
+        padding: 0.5rem !important;
+        border-top: 1px solid #55C03A !important;
+    }
+    .freeTickets2 {
+        visibility: hidden;
+    }
+
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+
+    .heroTop {
+        flex-direction: column;
+        width: 100%;
+
+        .imageWrapper {
+            img {
+                height: 4rem ;
+            }
+        }
+
+        .days {
+            width: 100% !important;
+            margin-top: 1rem;
+
+            .date {
+                
+                span {
+            
+                font-size: $textSmall ;
+            }
+            p {
+                font-size: $textBase;
+                font-weight: $fontBold;
+            }
+          }
+        }
+    }
+
+    .heroCenter {
+        font-size: 30px !important;
+    }
+
+    
+}
+

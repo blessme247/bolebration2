@@ -19,10 +19,14 @@ const Cart = ({ setCartOpen }) => {
 
 
 
-
+  // State for setting itemsInCart from localStorage
   const [cartItemsList, setCartItemsList] = useState([]);
 
+  // State for setting email in the onChange function for email input
   const [email, setEmail] = useState("");
+
+  //State for setting Button Proceed status
+  const [buttonStatus, setButtonStatus] = useState(false)
 
 
   // initiate a total variable
@@ -35,8 +39,11 @@ const Cart = ({ setCartOpen }) => {
 
   const proceedToCheckout = async (event) => {
     event.preventDefault();
+
+    setButtonStatus(true)
     let response;
     if (email) {
+
       try {
 
         // Check if the email already exists in the database
@@ -84,6 +91,8 @@ const Cart = ({ setCartOpen }) => {
 
           if(res.statusText === "OK") {
               navigate("/ordercheckout");
+
+              setButtonStatus(false)
           }
         } catch (error) {
           Swal.fire({
@@ -123,8 +132,6 @@ const Cart = ({ setCartOpen }) => {
       const quantity = item.count;
       let tempTotal = amount * quantity;
 
-      // Multiply amount by quantity to get total price of food ordered
-      // total += amount * quantity;
       setTotal((prev) => prev + tempTotal);
     });
   }, [cartItemsList]);
@@ -177,7 +184,7 @@ const Cart = ({ setCartOpen }) => {
               onChange={onEmailChanged}
             />
             {!email ? (
-              <small className="errorMessage">Email field is required</small>
+              <small className="errorMessage">Email is required</small>
             ) : null}
           </div>
           <div className="checkoutRedirectWrapper">
@@ -187,7 +194,7 @@ const Cart = ({ setCartOpen }) => {
               disabled={!canProceedToCheckout}
               onClick={proceedToCheckout}
             >
-              PROCEED TO CHECKOUT
+              {buttonStatus ?"IN PROGRESS" : "PROCEED TO CHECKOUT"}
             </button>
           </div>
         </form>

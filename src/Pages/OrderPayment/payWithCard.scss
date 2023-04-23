@@ -12,6 +12,15 @@
         font-weight: $fontSemiBold;
     }
 
+    .backButton {
+        color: $primary;
+        font-size: $textSmall;
+        font-weight: $fontMedium;
+        cursor: pointer;
+        margin-left: auto;
+        // transform: translateY(-3rem);
+    }
+
     .noSupport {
         margin: 0.5rem 0;
         color: $primary;

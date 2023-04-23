@@ -15,6 +15,16 @@
    .content {
     color: #625C5C;
 
+    .prevButton {
+        color: $primary;
+        font-size: $textSmall;
+        font-weight: $fontMedium;
+        cursor: pointer;
+        margin-left: auto;
+        padding-top: 1rem;
+        text-align: right;
+    }
+
 
     .info {
         font-size: $textSmall;

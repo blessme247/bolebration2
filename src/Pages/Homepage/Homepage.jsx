@@ -12,6 +12,7 @@ import Tweets from "./Tweets";
 import { motion } from "framer-motion";
 import CallToAction from "./CallToAction";
 import SecondMarquee from "../../Components/Marquee/SecondMarquee";
+import Support from "./Support";
 
 const Homepage = ({count}) => {
 
@@ -173,6 +174,8 @@ const Homepage = ({count}) => {
         <Partners />
 
         <Tweets />
+
+        <Support />
       </section>
     </div>
   );

@@ -8,7 +8,7 @@ import { NotifyUserAfterOrderTransfer } from "../../utils/notifyUser";
 import PayViaTransfer from "../../Components/PayViaTransfer/PayViaTransfer";
 
 const OrderPayment = () => {
-  // State to update the payment method screen
+  // State to change the payment method screen
   const [screenIndex, setScreenIndex] = useState(1);
 
   //State to trigger food order prompt after transfer
@@ -23,20 +23,23 @@ const OrderPayment = () => {
   return (
     <div className="paymentScreenWrapper">
       <div className="paymentContent">
-        {(screenIndex === 1 || screenIndex === 2 || screenIndex === 4) && (
+        
           <div className="top">
             <img src={logo} alt="bolebration logo" />
             <p>Order Checkout</p>
           </div>
-        )}
+      
+
+      {/* Main Content */}
         <div className="main">
           <div className="left">
             <p className="heading">Order Summary</p>
             <hr />
             <div className="orderDetails">
               {userCartItems &&
-                userCartItems.map((cartItem) => {
+                userCartItems.map((cartItem, index) => {
 
+                  key={index}
                   const amount = cartItem.price.replace("₦", "").replace(",", "");
                   const quantity = cartItem.count;
 
@@ -86,6 +89,7 @@ const OrderPayment = () => {
               <>
                 <PayViaTransfer
                   amountDue={(total + 50)?.toLocaleString()}
+                  setScreenIndex={()=>setScreenIndex(1)}
                   clickFunc={() =>{ 
                     setIsSwal(true)  
                   }

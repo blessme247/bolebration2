@@ -104,6 +104,7 @@ const TicketPayment = () => {
               <>
                 <PayViaTransfer
                   amountDue={totalAmount}
+                  setScreenIndex={()=>setScreenIndex(1)}
                   info={true}
                   clickFunc={() =>{ 
                     setIsSwal(true)  

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import "./payViaTransfer.scss";
 
 
-const PayViaTransfer = ({amountDue, clickFunc, info }) => {
+const PayViaTransfer = ({amountDue, clickFunc, info, setScreenIndex }) => {
 
     const navigate = useNavigate()
 
@@ -14,6 +14,9 @@ const PayViaTransfer = ({amountDue, clickFunc, info }) => {
         
 
         <div className="content">
+
+        <p className="prevButton" onClick={setScreenIndex}>Go Back</p>
+
             <div className = "top">
             Transfer ₦{amountDue} to
             </div>

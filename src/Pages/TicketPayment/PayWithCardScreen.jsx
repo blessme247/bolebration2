@@ -57,7 +57,10 @@ const PayWithCardScreen = ({ setScreenIndex, Amount }) => {
 
   return (
     <div className="cardPaymentWrapper">
-      <div className="top">Pay With Debit Card</div>
+      <div className="top">Pay With Debit Card
+      
+      <span className="backButton" onClick={()=> setScreenIndex(1)}>Go Back</span>
+      </div>
 
       <p className="noSupport">Visa Card Currently not supported</p>
 

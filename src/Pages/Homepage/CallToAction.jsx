@@ -46,7 +46,7 @@ const CallToAction = () => {
               {count >= 2501 && "Get Tickets"}
             </Link>
 
-            <Link className='orderBtn' to="/order">Pre-order Food</Link>
+            <Link className='orderBtn' to="/order">Pre-order Bole</Link>
             
           </div>
         </div>

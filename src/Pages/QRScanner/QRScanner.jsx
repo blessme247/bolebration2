@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import QrScanner from 'qr-scanner';
+import Swal from "sweetalert2";
 
 const QRScanner = () => {
 
@@ -9,12 +10,22 @@ const QRScanner = () => {
         console.log(videoRef)
     }, [videoRef])
 
+    const showOutput = (result) => {
+        Swal.fire({
+            position: "center",
+            icon: "info",
+            title: result,
+            showConfirmButton: true,
+            timer: 3500,
+          })
+    }
+
     let qrScanner;
 
     if(videoRef.current != null) {
         qrScanner = new QrScanner(
             videoRef.current,
-            result => console.log('decoded qr code:', result),
+            result => { showOutput(result.data); console.log('decoded qr code:', result)},
             { returnDetailedScanResult: true,
                 onDecodeError: (err) => {console.log(err)},
                 maxScansPerSecond: undefined

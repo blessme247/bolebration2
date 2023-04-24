@@ -392,6 +392,7 @@
 
             @media (max-width: $layout-breakpoint-small) {
                 font-size: $textBase;
+                font-weight: $fontNormal;
             }
     
             .supportEmailLink {

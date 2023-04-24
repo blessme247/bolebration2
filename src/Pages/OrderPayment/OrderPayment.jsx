@@ -39,14 +39,13 @@ const OrderPayment = () => {
               {userCartItems &&
                 userCartItems.map((cartItem, index) => {
 
-                  key={index}
                   const amount = cartItem.price.replace("₦", "").replace(",", "");
                   const quantity = cartItem.count;
 
                   // Multiply amount by quantity to get total price of food ordered
                   total += amount * quantity;
                   return (
-                    <div className="orderDetail">
+                    <div key={index} className="orderDetail">
                       <p className="foodName">{cartItem.name}</p>
                       <p className="detail">
                         <span>Amount</span> <span>{cartItem.price}</span>

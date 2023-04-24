@@ -10,6 +10,7 @@ import NoFreeTicket from "./Pages/NoFreeTicket/NoFreeTicket";
 import "react-toastify/dist/ReactToastify.css";
 import OrderPayment from "./Pages/OrderPayment/OrderPayment";
 import TicketPayment from "./Pages/TicketPayment/TicketPayment";
+import QRScanner from "./Pages/QRScanner/QRScanner";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
        <Route path="/ordercheckout" element={<OrderPayment />}/> 
        <Route path="/ticketcheckout" element={<TicketPayment />}/> 
        <Route path="/freeticketexhausted" element={<NoFreeTicket />}/> 
+       <Route path="/qrscanner" element={<QRScanner />}/> 
       
      </Routes> 
 

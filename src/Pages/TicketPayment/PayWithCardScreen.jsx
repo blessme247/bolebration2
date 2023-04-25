@@ -85,7 +85,7 @@ const PayWithCardScreen = ({ setScreenIndex, Amount }) => {
           try {
             let response = await axiosInstance.post("/encrypt", {
               data,
-              amount: Amount ,
+              amount: Amount - 50,  // Deduct #50 that was added as charge in the PaidRegistration.jsx from the amount because the #50 charge comes directly from the backend
               pin
             });
 

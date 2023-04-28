@@ -17,6 +17,17 @@
   cursor: pointer;
 }
 
+%scanBtn {
+  text-align: center;
+  padding: 0.7rem 1.875rem;
+  border-radius: 5px;
+  color: $white;
+  font-size: $textBase;
+  font-weight: $fontMedium;
+  background-color: $primary;
+  cursor: pointer;
+}
+
 %disabledBtn {
   text-align: center;
   padding: 1rem 1.875rem;

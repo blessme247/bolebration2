@@ -1,0 +1,42 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/components/global";
+
+
+.qrPageContainer {
+    background-color: lighten($color: #55C03A, $amount: 48);
+    min-height: 100vh;
+    padding: 3rem 0;
+
+    .video {
+        height: 50vh;
+        max-height: 50vh;
+        min-height: 50vh;
+        // border: 2px solid white;
+        margin: 1rem auto;
+    }
+
+    .scanBtn {
+        display: block;
+        @extend %scanBtn;
+        margin:0 auto;
+    }
+
+    .scanResultTitle {
+        margin-top: 2rem;
+    }
+
+    .scanResult {
+        margin-top: 1rem;
+        padding: 1rem 0.8rem;
+        background-color: $white;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        color: #55C03A;
+        border-top: 2px solid #55C03A ;
+
+        p {
+            margin-bottom: 0.3rem;
+            
+        }
+    }
+}

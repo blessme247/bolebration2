@@ -64,6 +64,6 @@ export const sendFoodOrderEmail = async ()=> {
         sendFoodOrderEmail()
       }
  } catch (error) {
-   
+  console.log(error, "errorCardpaymeal")
  }
 }

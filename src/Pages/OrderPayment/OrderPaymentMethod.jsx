@@ -1,6 +1,7 @@
 import React from "react";
 import debitIcon from "../../assets/Icons/debitCard.svg";
 import transferIcon from "../../assets/Icons/transfer.svg";
+import { notifyUser } from "../../utils/notifyUser";
 
 
 
@@ -28,8 +29,10 @@ const OrderPaymentMethod = ({ setScreenIndex, total }) => {
           <span className="title"> Debit Card</span>
         </div>
         <div className="option transferOption" onClick={() => {
-          setScreenIndex(4)
+          notifyUser()
         }}>
+
+           {/* <div className="option debitOption" onClick={() => notifyUser()}> */}
           <span>
             {" "}
             <img src={transferIcon} alt="transfer" />{" "}

@@ -18,7 +18,7 @@ export const notifyUser = ()=> {
         position: "center",
         icon: "info",
         title:
-          "This Payment Option is currently unavailable, Please use the transfer option",
+          "This Payment Option is no longer unavailable, Please use the debit card option",
         showConfirmButton: true,
         timer: 4000,
       });

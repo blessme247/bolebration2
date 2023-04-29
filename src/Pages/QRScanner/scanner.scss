@@ -16,6 +16,19 @@
             max-width: 90%;
           }
 
+        .iconWrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+
+            .svgIcon {
+                animation-name: bounce;
+                animation-timing-function: ease;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+        }
+
 
         .video {
             height: 50vh;
@@ -55,3 +68,15 @@
 
    
 }
+
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

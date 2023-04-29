@@ -3,29 +3,38 @@ import QrScanner from "qr-scanner";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import axiosInstance from "../../utils/axiosConfig";
+import ScannerIcon from "../../assets/Icons/QR.svg"
+
 import "./scanner.scss";
 
 const QRScanner = () => {
   const videoRef = useRef();
 
-  // Endpoint scanned
-  const [resultText, setResultText] = useState();
+  const [resultText, setResultText] = useState(null);
 
+  // State for showing scanned QR code details
   const [showResultText, setShowResultText] = useState(false);
 
-  useEffect(() => {}, [videoRef]);
+  // State for showing scanned SVG
+  // const [showScannerSVG, setShowScannerSVG] = useState(true);
+  
 
+  
+  useEffect(() => { console.log(videoRef, "videoRef")}, []);
+
+  let qrScanner;
+  
   const verifyQR = async (data) => {
-    //If resultText state has not been set yet, use a parsed result.data on line 60 directly
-    // let payload = resultText || data;
-    let payload = data;
+    
+    //Stop showing the highlighted scan region when you start to verify
+    qrScanner?.destroy() 
 
-    let response = await axiosInstance.post("/scanned", payload);
+    let response = await axiosInstance.post("/scanned", data);
 
     if (response) {
       Swal.fire({
         position: "center",
-        icon: response.data == "scanned" ? "success" : "error",
+        icon: response.data == "access granted" ? "success" : "error",
         title: response.data,
         showConfirmButton: true,
         timer: 15000,
@@ -44,46 +53,71 @@ const QRScanner = () => {
     }
   };
 
-  let qrScanner;
 
-  if (videoRef.current != null) {
-    qrScanner = new QrScanner(
-      videoRef.current,
-      (result) => {
-        // console.log(result, "whole result object");
-        setResultText(() => {
-          return JSON.parse(result.data);
-        });
-        setShowResultText(true);
-        // console.log("decoded qr code:", resultText);
-        // console.log("decoded qr code email:", result?.data.email);
-        qrScanner.stop();
-        verifyQR(JSON.parse(result.data));
-      },
-      {
-        returnDetailedScanResult: true,
-        highlightScanRegion: true,
-        onDecodeError: (err) => {
-        },
-        maxScansPerSecond: undefined,
-        /* your options or returnDetailedScanResult: true if you're not specifying any other options */
-      }
-    );
-    qrScanner.setCamera("environment");
-  }
+  // if (videoRef.current != null) {
+  //   qrScanner = new QrScanner(
+  //     videoRef.current,
+  //     (result) => {
+  //       // console.log(result, "whole result object");
+  //       setResultText(() => {
+  //         return JSON.parse(result.data);
+  //       });
+  //       setShowResultText(true);
+  //       // console.log("decoded qr code:", resultText);
+  //       // console.log("decoded qr code email:", result?.data.email);
+  //       qrScanner.stop();
+  //       verifyQR(JSON.parse(result.data));
+        
+  //     },
+  //     {
+  //       returnDetailedScanResult: true,
+  //       highlightScanRegion: true,
+  //       onDecodeError: (err) => {
+  //       },
+  //       maxScansPerSecond: undefined,
+  //       /* your options or returnDetailedScanResult: true if you're not specifying any other options */
+  //     }
+  //   );
+  //   qrScanner.setCamera("environment");
+  // }
 
   const scanStart = () => {
-    // if(videoRef != null) {
-      setResultText()
-    qrScanner?.start();
-    // }
+
+    setResultText(null)
+
+
+    if ( videoRef.current != null) {
+      qrScanner = new QrScanner(
+        videoRef.current,
+        (result) => {
+          setResultText(() => {
+            return JSON.parse(result.data);
+          });
+          setShowResultText(true);
+          qrScanner.stop();
+          verifyQR(JSON.parse(result.data));
+          
+        },
+        {
+          returnDetailedScanResult: true,
+          highlightScanRegion: true,
+          onDecodeError: (err) => {
+          },
+          maxScansPerSecond: undefined,
+          /* your options or returnDetailedScanResult: true if you're not specifying any other options */
+        }
+      );
+      qrScanner.setCamera("environment");
+      qrScanner.start();
+    }
+
+
   };
   return (
     <div className="qrPageContainer">
       <div className="qrPageWrapper" >
-        {/* <QrScanner /> */}
 
-        <video className="video" ref={videoRef} src={videoRef.current}></video>
+        <video className="video" ref={videoRef} src={videoRef.current}></video> 
         <button className="scanBtn" onClick={scanStart}>
           Scan 
         </button>

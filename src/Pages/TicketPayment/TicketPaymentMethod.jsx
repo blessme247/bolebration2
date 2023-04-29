@@ -29,7 +29,7 @@ const TicketPaymentMethod = ({ setScreenIndex }) => {
           </span>{" "}
           <span className="title"> Debit Card</span>
         </div>
-        <div className="option transferOption" onClick={() => setScreenIndex(4)}>
+        <div className="option transferOption" onClick={() => notifyUser()}>
           <span>
             {" "}
             <img src={transferIcon} alt="transfer" />{" "}

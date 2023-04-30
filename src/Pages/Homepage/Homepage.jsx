@@ -85,7 +85,7 @@ const Homepage = ({count}) => {
         <div className="heroSection">
 
           {/* <div className="layoutWithBg">  */}
-          <motion.div className="heroTop"
+          {/* <motion.div className="heroTop"
           initial={{opacity: 0, x: 60}} animate={{opacity: 1, x: 0}}
           transition= {{
            ease: "easeInOut",
@@ -117,7 +117,7 @@ const Homepage = ({count}) => {
             </div>
 
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <div className="heroCenter">
             <motion.div className="top" 

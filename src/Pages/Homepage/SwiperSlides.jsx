@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import image1 from "../../assets/Images/image1JPG.jpg"
 import image2 from "../../assets/Images/Image2JPG.jpg"
 import image3 from "../../assets/Images/image3JPG.jpg"
-import image4 from "../../assets/Images/image4JPG.jpg"
+import image4 from "../../assets/Images/Image4JPG.jpg"
 import image5 from "../../assets/Images/image5JPG.jpg"
 import image6 from "../../assets/Images/image6JPG.jpg"
 

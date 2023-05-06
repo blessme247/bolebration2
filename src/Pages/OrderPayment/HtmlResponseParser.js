@@ -1,3 +1,6 @@
+// This component is used to create an HTML element containing a form element 
+// that is returned when we make a request to the Interswitch API via Visa cards
+ 
  const creatElement = (content) => {
 
     let retunObj = {}

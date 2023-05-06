@@ -8,16 +8,11 @@ const Cart = ({ setCartOpen }) => {
 
   const navigate = useNavigate();
 
-
   // get items in cart from localStorage
   let itemsInCart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-
-
   // get user order email from localStorage
   let orderEmail = JSON.parse(localStorage.getItem("orderEmail")) || {};
-
-
 
   // State for setting itemsInCart from localStorage
   const [cartItemsList, setCartItemsList] = useState([]);
@@ -41,6 +36,7 @@ const Cart = ({ setCartOpen }) => {
     event.preventDefault();
 
     setButtonStatus(true)
+
     let response;
     if (email) {
 
@@ -51,16 +47,19 @@ const Cart = ({ setCartOpen }) => {
           email,
         });
       } catch (error) {
+        setButtonStatus(false)
         Swal.fire({
           position: "center",
           icon: "error",
           title:
-            error.response.data.message,
+            // error.response.data.message,
+            "something Went Wrong, Please try again",
           showConfirmButton: true,
           timer: 3500,
-        }).then(()=>{
-          navigate("/registration");
         })
+        // .then(()=>{
+        //   navigate("/registration");
+        // })
       }
 
       // If email exists, make a post request to send the order to the database
@@ -73,7 +72,7 @@ const Cart = ({ setCartOpen }) => {
         localStorage.setItem("orderEmail", JSON.stringify(emailLocalStorage))
 
         try {
-          // initiate a  description variable
+          // initiate a  descriptiion array which will take the name, value and amount to be sent as payload
           let description = [];
 
           for (let i = 0; i < cartItemsList.length; i++) {
@@ -109,15 +108,7 @@ const Cart = ({ setCartOpen }) => {
     }
   };
 
-  // map over the items in cart to get each amount and quantity
-  // itemsInCart.map((item) => {
-  //   const amount = item.price.replace("₦", "").replace(",", "");
-  //   const quantity = item.count;
-
-  //   // Multiply amount by quantity to get total price of food ordered
-  //   // total += amount * quantity;
-  //   setTotal(prev=> prev + (amount * quantity))
-  // });
+  
 
   useEffect(() => {
     if (itemsInCart.length > 0) {
@@ -126,7 +117,7 @@ const Cart = ({ setCartOpen }) => {
   }, []);
 
   useEffect(() => {
-    setTotal(0); // To make the total alway be the actual value
+    setTotal(0); // To make the total always be the actual value
     cartItemsList.map((item) => {
       const amount = item.price.replace("₦", "").replace(",", "");
       const quantity = item.count;

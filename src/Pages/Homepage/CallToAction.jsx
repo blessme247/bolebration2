@@ -16,25 +16,29 @@ const CallToAction = () => {
     <div className="callToAction">
           <div className="freeTickets">
             <div className="percent">
-            {count ? <span>{Math.round((count/2500) * 100 )} %</span> : null}
+            {/* {count ? <span>{Math.round((count/2500) * 100 )} %</span> : null} */}
+            <span>100%</span>
 
             </div>
 
             <div className="count">
             <p>Free Tickets</p>
-            <span>{count && Number(count) - 1}/2500</span>
+            {/* <span>{count && Number(count) - 1}/2500</span> */}
+            <span>2500/2500</span>
             </div>
           </div>
 
           <div className="freeTickets2">
           <div className="percent">
-          {count ? <span>{Math.round((count/2500) * 100 )} %</span> : null}
+          {/* {count ? <span>{Math.round((count/2500) * 100 )} %</span> : null} */}
+          <span>100%</span>
 
             </div>
 
             <div className="count">
             <p>Free Tickets</p>
-            <span>{count && Number(count) - 1}/2500</span>
+            {/* <span>{count && Number(count) - 1}/2500</span> */}
+            <span>2500/2500</span>
             </div>
           </div>
 
@@ -42,8 +46,9 @@ const CallToAction = () => {
 
           <div className="registerBtnWrapper">
            <Link to="/registration" className="registerBtn">
-              {count < 2501 && "Register Now"}
-              {count >= 2501 && "Get Tickets"}
+              {/* {count < 2501 && "Register Now"}
+              {count >= 2501 && "Get Tickets"} */}
+              Get Tickets
             </Link>
 
             <Link className='orderBtn' to="/order">Pre-order Bole</Link>

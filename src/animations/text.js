@@ -6,11 +6,6 @@ import { gsap, Power3 } from "gsap";
 
 export const split = () => {
   const heroText = document.querySelectorAll(".heroBottom")
-//   console.log(p)
-//   const p = document.querySelectorAll(".middleText");
-//   const d = document.querySelectorAll(".bottomText");
-//   const btn = document.querySelector(".redirectLink404")
-
 
 heroText.forEach((item) => {
     Splitting({

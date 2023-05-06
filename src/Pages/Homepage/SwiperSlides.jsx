@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 
 import image1 from "../../assets/Images/image1JPG.jpg"
-import image2 from "../../assets/Images/image2JPG.jpg"
+import image2 from "../../assets/Images/Image2JPG.jpg"
 import image3 from "../../assets/Images/image3JPG.jpg"
 import image4 from "../../assets/Images/image4JPG.jpg"
 import image5 from "../../assets/Images/image5JPG.jpg"
@@ -27,12 +27,7 @@ const SwiperSlides = () => {
         slidesPerView={1}
         // slidesPerView={3}
         loop={true}
-        // navigation={true}
-        // navigation={{
-        //   nextEl: ".image-swiper-button-next",
-        //   prevEl: ".image-swiper-button-prev",
-        //   disabledClass: "swiper-button-disabled"
-        // }}
+        
 
         autoplay={true}
         breakpoints={{
@@ -41,12 +36,6 @@ const SwiperSlides = () => {
             // width: 250,
             slidesPerView: 1,
           },
-          // 700: {
-          //   // width: 250,
-          //   slidesPerView: 2,
-          // },
-          
-          
         }}
 
         pagination={{ clickable: true }}

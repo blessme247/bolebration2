@@ -1,5 +1,4 @@
 import React from 'react'
-import leftImage from "../../assets/Images/registerImg.jpg"
 import FreeRegistrationForm from './FreeRegistrationForm'
 import PaidRegistrationForm from './PaidRegistrationForm'
 
@@ -16,7 +15,7 @@ const Registration = ({count}) => {
     <> 
     <div className='RegPage'>
         <div className="imageWrapper">
-            <img src={leftImage} alt="bole (plantain)" />
+            <img src="https://ik.imagekit.io/blessme247/Bolebration/registerImg.jpg" alt="bole (plantain)" />
         </div>
         
             {/* {count <   2501 && <FreeRegistrationForm />}

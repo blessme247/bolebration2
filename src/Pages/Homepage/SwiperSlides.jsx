@@ -6,17 +6,6 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/css/navigation";
 
 
-
-import image1 from "../../assets/Images/image1JPG.jpg"
-import image2 from "../../assets/Images/Image2JPG.jpg"
-import image3 from "../../assets/Images/image3JPG.jpg"
-import image4 from "../../assets/Images/Image4JPG.jpg"
-import image5 from "../../assets/Images/Image5JPG.jpg"
-import image6 from "../../assets/Images/Image6JPG.jpg"
-
-
-
-
 const SwiperSlides = () => {
   return (
     <>
@@ -45,40 +34,39 @@ const SwiperSlides = () => {
         <div className="swiper-wrapper">
           <SwiperSlide className="imageWrapper">
        
-            <img src={image1} alt="people bolebrating" />
+            <img src="https://ik.imagekit.io/blessme247/Bolebration/image1JPG.jpg" alt="people bolebrating" />
       
 
           </SwiperSlide>
 
           <SwiperSlide className="imageWrapper">
             
-          <img src={image2} alt="people bolebrating" />
+          <img src="https://ik.imagekit.io/blessme247/Bolebration/Image2JPG.jpg" alt="people bolebrating" />
 
           </SwiperSlide>
 
           <SwiperSlide className="imageWrapper">
             
-          <img src={image3} alt="people bolebrating" />
+          <img src="https://ik.imagekit.io/blessme247/Bolebration/image3JPG.jpg" alt="people bolebrating" />
           
           </SwiperSlide>
 
           <SwiperSlide className="imageWrapper">
-          <img src={image4} alt="people bolebrating" />
+          <img src="https://ik.imagekit.io/blessme247/Bolebration/Image4JPG.jpg" alt="people bolebrating" />
           
           </SwiperSlide>
 
           <SwiperSlide className="imageWrapper">
-          <img src={image5} alt="people bolebrating" />
+          <img src="https://ik.imagekit.io/blessme247/Bolebration/Image5JPG.jpg" alt="people bolebrating" />
          
           </SwiperSlide>
 
           <SwiperSlide className="imageWrapper">
-          <img src={image6} alt="people bolebrating" />
+          <img src="https://ik.imagekit.io/blessme247/Bolebration/Image6JPG.jpg" alt="people bolebrating" />
          
           </SwiperSlide>
         </div>
 
-        {/* </div> */}
       </Swiper>
     </>
   );

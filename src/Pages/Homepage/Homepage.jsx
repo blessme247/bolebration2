@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/Icons/logo.svg";
 import Marquee from "../../Components/Marquee/Marquee";
 
 import "./homepage.scss";
-import SwiperSlides from "./SwiperSlides";
-import { Link } from "react-router-dom";
 import Partners from "./Partners";
 import { split } from "../../animations/text";
 import Tweets from "./Tweets";

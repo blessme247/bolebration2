@@ -12,7 +12,7 @@ import image2 from "../../assets/Images/Image2JPG.jpg"
 import image3 from "../../assets/Images/image3JPG.jpg"
 import image4 from "../../assets/Images/Image4JPG.jpg"
 import image5 from "../../assets/Images/Image5JPG.jpg"
-import image6 from "../../assets/Images/image6JPG.jpg"
+import image6 from "../../assets/Images/Image6JPG.jpg"
 
 
 

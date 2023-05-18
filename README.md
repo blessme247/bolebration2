@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React project that was bootstrapped with Vite.
 
 This project is a web application for ticket registration, ticket purchase, food order and QR code scanning for a social event.
 

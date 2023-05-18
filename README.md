@@ -24,4 +24,4 @@ $ cd bolebration1
 $ npm install  # to install npm packages and dependencies
 
 ## Usage 
-$ npm start  # to run the project
+$ npm run dev  # to run the project

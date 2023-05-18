@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Project Brief
 
 This is a React project that was bootstrapped with Vite.
 

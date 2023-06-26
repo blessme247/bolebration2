@@ -21,7 +21,9 @@ const PaidRegistrationForm = () => {
   return (
     <div className="formWrapper">
       <div className="logoImage">
+        <a href="/">
         <img src={logo} alt="logo" />
+        </a>
       </div>
 
       <p className="formHeading">Register</p>
